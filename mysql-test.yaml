@@ -1,0 +1,14 @@
+apiVersion: "choerodon.io/v1alpha1"
+kind: "C7NHelmRelease"
+metadata:
+  name: "mysql-test"
+spec:
+  repoURL: "http://chart.choerodon.com.cn/choerodon/infra/"
+  chartName: "mysql"
+  chartVersion: "0.1.0-dev.20180622150847"
+  values: >
+    env:
+      open:
+        MYSQL_ROOT_PASSWORD: password
+    service:
+      port: 3306
